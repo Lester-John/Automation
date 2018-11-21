@@ -13,26 +13,17 @@ public class AbstractTestCase {
 	@Before
 	public void ttBefore()
 	{
-		 //Creating a driver object referencing WebDriver interface
-       // WebDriver driver;
-        
-        //Setting the webdriver.chrome.driver property to its executable's location
+
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
-	
-        //Instantiating driver object
         driver = new ChromeDriver();
-        
-        
-        //Using get() method to open a webpage
         driver.get(PropertyHelper.ReadProperty("inputdata", "base.url"));
         driver.manage().window().maximize();
-        //driver.switchTo().alert().accept();
 	}
 	
 	@After
 	public void ttAfter()
 	{
-		//driver.close();
+		driver.close();
 		
 	}
 }

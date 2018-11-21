@@ -3,7 +3,7 @@ package util;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
-//import java.util.Enumeration;
+
 
 
 public class PropertyHelper {
@@ -23,7 +23,7 @@ public class PropertyHelper {
             System.out.println("Sorry, unable to find " + sFileName);
             return null;
         }
-        //load a properties file from class path, inside static method
+
         prop.load(input);
 
         return prop.getProperty(sKey);

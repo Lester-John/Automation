@@ -21,9 +21,7 @@ public class TestCase1 extends AbstractTestCase{
 	{
 		
 		driver.findElement(By.linkText("For Me")).click();  
-		//driver.findElement(By.xpath("//*[contains(@class, 'CHAM_tabButton vAlignMiddle')]//*[text() = 'For Me']")).click();
-	    driver.findElement(By.linkText("Bank accounts")).click();/// this i copied from your file
-		//driver.findElement(By.linkText("closeButton")).click();/// this i copied from your file
+	    driver.findElement(By.linkText("Bank accounts")).click();
 		driver.findElement(By.xpath("//*[@id=\"zaSkin\"]/body/div[4]/div/div/div[1]/div/a/span")).click();
         driver.findElement(By.id(PropertyHelper.ReadProperty("inputdata", "object.username"))).sendKeys(PropertyHelper.ReadProperty("inputdata", "data.username"));
         driver.findElement(By.id(PropertyHelper.ReadProperty("inputdata", "object.password"))).sendKeys(PropertyHelper.ReadProperty("inputdata", "data.password"));
